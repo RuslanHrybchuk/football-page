@@ -1,5 +1,5 @@
-let useLocalStorage = false;
-let useMongoDB = true;
+let useLocalStorage = true;
+let useMongoDB = false;
 let addedFeadback = document.getElementById('feadback-admin');
 let db;
 let storageFeadack = [];

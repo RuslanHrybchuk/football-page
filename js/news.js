@@ -1,4 +1,4 @@
-let useLocalStorage = false;
+let useLocalStorage = true;
 let useMongoDB = false;
 let addedNews = document.getElementById('added-list-news');
 let db;
