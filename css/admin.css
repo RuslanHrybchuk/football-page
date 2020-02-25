@@ -1,0 +1,60 @@
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+header,
+main,
+footer {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cutive Mono', monospace;
+}
+.banner {
+  background-image: url(/img/admin-banner.jpg);
+  width: 100%;
+  height: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#btn-position {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+li {
+  margin: 0;
+  display: flex;
+  padding: 25px;
+  list-style: none;
+}
+.form-group-admin-btn {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
+.form-group-admin-btn:hover {
+  background-color: cadetblue;
+}
+#feadback-admin {
+  background-color: silver;
+  text-transform: uppercase;
+}
+footer {
+  color: white;
+  background-color: #343a40;
+  text-align: center;
+}
+.bottom-text {
+  font-style: italic;
+}
