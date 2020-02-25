@@ -22,7 +22,7 @@ footer {
   font-family: 'Cutive Mono', monospace;
 }
 .banner {
-  background-image: url(/img/admin-banner.jpg);
+  background-image: url(../img/admin-banner.jpg);
   width: 100%;
   height: auto;
   background-position: center top;
