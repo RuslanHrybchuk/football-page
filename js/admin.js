@@ -46,7 +46,9 @@ if (isOnline()) {
   } else if (useMongoDB) {
     getDataUser();
   } else {
-    // getFromFeadbackDB();
+    if(initIndexedDB()){
+      getFromFeadbackDB();
+     }
   }
 }
 
@@ -138,17 +140,19 @@ document
   .querySelector('.form-group-admin-btn')
   .addEventListener('click', feadbackSubmit);
 
-let openRequest = window.indexedDB.open('feadbackDataBase');
-openRequest.onupgradeneeded = () => {
-  db = openRequest.result;
-  db.createObjectStore('feadbackDB', { keyPath: 'id' });
-};
-openRequest.onsuccess = () => {
-  db = openRequest.result;
-};
-openRequest.onerror = () => {
-  console.error('Error, fix the bugs!!');
-};
+function initIndexedDB(){
+  let openRequest = window.indexedDB.open('feadbackDataBase');
+  openRequest.onupgradeneeded = () => {
+    db = openRequest.result;
+    db.createObjectStore('feadbackDB', { keyPath: 'id' });
+  };
+  openRequest.onsuccess = () => {
+    db = openRequest.result;
+  };
+  openRequest.onerror = () => {
+    console.error('Error, fix the bugs!!');
+  };
+}
 
 function postToFeadbackDB(id, firstName, lastName, email, feadback) {
   let transaction = db.transaction('feadbackDB', 'readwrite');
