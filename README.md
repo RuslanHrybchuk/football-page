@@ -11,3 +11,18 @@ To launch server you need to do these steps:
    Now you can launch the server by comand:
    npm start
    find site on link https://localhost:3000
+
+in the file admin.js or news.js to use local storage you need:
+
+1. setup useLocalStorage to "true";
+2. setup useMongoDB to "false";
+
+in the file admin.js or news.js to use indexedDB you need:
+
+1. setup useLocalStorage to "false";
+2. setup useMongoDB to "false";
+
+in the file admin.js or news.js to use MongoDB you need:
+
+1. setup useLocalStorage to "false";
+2. setup useMongoDB to "true";
