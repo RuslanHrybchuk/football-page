@@ -1,7 +1,6 @@
 let useLocalStorage = true;
 let useMongoDB = false;
 let addedNews = document.getElementById('added-list-news');
-let db;
 let storageNews = [];
 
 const isOnline = () => window.navigator.onLine;
